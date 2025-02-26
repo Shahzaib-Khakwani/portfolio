@@ -42,12 +42,15 @@ jobs:
           npm run build
           touch build/.nojekyll
 
-      - name: Upload artifact
-        uses: actions/upload-artifact@v4
+      # Check the build directory content
+      - name: List build directory
+        run: ls -la build
+
+      # Package the build directory properly for Pages
+      - name: Upload pages artifact
+        uses: actions/upload-pages-artifact@v3
         with:
-          name: github-pages
-          path: build
-          if-no-files-found: error
+          path: 'build'
 
   deploy:
     environment:
