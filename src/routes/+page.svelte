@@ -1,4 +1,5 @@
 <script>
+    import { base } from "$app/paths";
     import { onMount } from "svelte";
     import { gsap } from 'gsap';
     import { fade } from 'svelte/transition';
@@ -124,9 +125,9 @@
         </div>
         
         <div class="flex  mt-4 gap-x-2 z-10">
-            <img bind:this={websiteBadge} class="md:absolute md:top-[50%] md:left-[18%] md:h-12" src="/images/website.svg" alt="">
-            <img bind:this={LandingBadge} class="md:h-12" src="/images/landing.svg" alt="">
-            <img bind:this={BrandingBadge} class="md:absolute md:top-[50%] md:right-[18%] md:h-12 " src="/images/branding.svg" alt="">
+            <img bind:this={websiteBadge} class="md:absolute md:top-[50%] md:left-[18%] md:h-12" src="{base}/images/website.svg" alt="">
+            <img bind:this={LandingBadge} class="md:h-12" src="{base}/images/landing.svg" alt="">
+            <img bind:this={BrandingBadge} class="md:absolute md:top-[50%] md:right-[18%] md:h-12 " src="{base}/images/branding.svg" alt="">
 
         </div>
         <div bind:this={leftCrumble} class="absolute top-[50%] left-0">
@@ -160,7 +161,7 @@
                     </div>
                     <img
                     class="absolute w-24 h-24 -top-[15%] left-[calc(50%-50px)] animate-smooth-updown" 
-                    src="/images/earth.png" 
+                    src="{base}/images/earth.png" 
                     alt="nothing"
                     >
             </div>
@@ -183,7 +184,7 @@
                     </div>
                     <img
                     class="absolute w-24 h-24 -top-[15%] left-[calc(50%-50px)] animate-smooth-updown" 
-                    src="/images/speaker.png" 
+                    src="{base}/images/speaker.png" 
                     alt="nothing"
                     >
             </div>
@@ -203,7 +204,7 @@
                     </div>
                     <img
                     class="absolute w-24 h-24 -top-[15%] left-[calc(50%-50px)] animate-smooth-updown" 
-                    src="/images/pencil.png" 
+                    src="{base}/images/pencil.png" 
                     alt="nothing"
                     >
             </div>
@@ -232,19 +233,19 @@ class="mx-auto border-t-[3px] border-[#8B2C55] w-2/3  rounded-full"
 
     <img 
     class="panel w-96 h-96 border-[10px] border-b-[30px] rotate-[-8deg] absolute z-40"
-    src="/images/back_page-0001.jpg" 
+    src="{base}/images/back_page-0001.jpg" 
     alt="">
     <img 
     class="panel w-96 h-96 border-[10px] border-b-[30px] rotate-[10deg] absolute z-30"
-    src="/images/django_page-0001.jpg" 
+    src="{base}/images/django_page-0001.jpg" 
     alt="">
     <img 
     class="panel w-96 h-96 border-[10px] border-b-[30px] rotate-[-12deg] absolute z-20"
-    src="/images/vision_page-0001.jpg" 
+    src="{base}/images/vision_page-0001.jpg" 
     alt="">
     <img 
     class="panel w-96 h-96 border-[10px] border-b-[30px] rotate-[14deg] absolute z-10"
-    src="/images/version.jpg" 
+    src="{base}/images/version.jpg" 
     alt="">
 
 </div>
